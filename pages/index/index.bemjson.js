@@ -3,7 +3,6 @@
 	title: 'Расписание занятий ШРИ',
 	head: [
 		{ elem: 'css', url: '_index.css' },
-		// { elem: 'js', url: 'http://yandex.st/jquery/1.7.2/jquery.min.js' },
 		{ block: 'i-jquery', elem: 'core' },
 		{ elem: 'js', url: '_index.js' }
 	],
@@ -28,10 +27,10 @@
 					]
 				}
 					]
-		}//,
-		// {
-		// 	block: 'b-days',
-		// 	content: [
+		},
+		{
+			block: 'b-days',
+			content: [
 		// 		{
 		// 			block: 'b-day',
 		// 			content: [
@@ -59,7 +58,11 @@
 		// 				}
 		// 			]
 		// 		}
-		// 	]
-		// }
+			]
+		},
+		{
+			block: 'b-footer',
+			content: 'Сделано Юрием Ремневым с помощью БЭМ'
+		}
 	]
 })
