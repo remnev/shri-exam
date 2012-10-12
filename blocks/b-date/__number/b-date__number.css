@@ -22,3 +22,8 @@
 	font-size: 12px;
 	font-style: italic;
 }
+
+.b-day_saturday_true .b-date__number
+{
+	background-color: #ff3355;
+}

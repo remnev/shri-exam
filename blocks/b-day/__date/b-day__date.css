@@ -1,4 +1,6 @@
 .b-day__date
 {
 	width: 80px;
+	display: inline-block;
+	float: left;
 }

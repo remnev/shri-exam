@@ -1,0 +1,30 @@
+.b-lecture__topic
+{
+	display: inline-block;
+	width: 540px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 22px;
+}
+
+.b-lecture__topic sup
+{
+	margin-left: 5px;
+	display: inline-block;
+	width: 40px;
+
+	text-align: center;
+	font-size: 10px;
+}
+
+.b-lecture__topic sup.green
+{
+	background-color: #00ff00;
+}
+
+.b-lecture__topic sup.brown
+{
+	background-color: #d9a16a;
+}

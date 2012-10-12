@@ -1,0 +1,14 @@
+.b-lectures
+{
+	height: 80px;
+	width: 870px;
+	background-color: #e5ebff;
+	overflow: hidden;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.b-day_saturday_true .b-lectures
+{
+	background-color: #ffe5ea;
+}

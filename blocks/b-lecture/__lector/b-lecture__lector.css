@@ -1,0 +1,11 @@
+.b-lecture__lector
+{
+	display: inline-block;
+	width: 205px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 14px;
+	line-height: 52px;
+}

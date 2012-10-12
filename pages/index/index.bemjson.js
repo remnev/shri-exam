@@ -26,7 +26,7 @@
 						{ elem: 'item', tag: 'li', content: '<span>Добавить занятие</span>' }
 					]
 				}
-					]
+			]
 		},
 		{
 			block: 'b-days',
@@ -48,24 +48,172 @@
 								}
 							]
 						},
-						// {
-						// 	block: 'b-lectures',
-						// 	content: [
-						// 		{
-						// 			block: 'b-lecture',
-						// 			content: [
-						// 				{
-						// 					elem: 'b-lecture__time',
-						// 					content: '19<span>00</span> — 20<span>00</span>'
-						// 				},
-						// 				{
-						// 					elem: 'b-lecture__topic',
-						// 					content: 'Общий цикл разработки'
-						// 				}
-						// 			]
-						// 		}
-						// 	]
-						// }
+						{
+							block: 'b-lectures',
+							content: [
+								{
+									block: 'b-lecture',
+									mix: [{ block: 'b-lectures', elem: 'lecture' }],
+									mods : { bottomLine : 'true' },
+									content: [
+										{
+											elem: 'time',
+											content: '19<sup>00</sup> — 20<sup>00</sup>'
+										},
+										{
+											elem: 'topic',
+											content: '<a href="yandex.ru">Общий цикл разработки</a> <sup class="green">pdf</sup><sup class="brown">video</sup>'
+										},
+										{
+											elem: 'lector',
+											content: '<img src="http://avatars.yandex.net/get-avatar/22422407/1f79b506bec259f72732e534813b6e52.6609-small"> <a href="yandex.ru">Михаил Трошев</a>'
+										}
+									]
+								},
+								{
+									block: 'b-lecture',
+									mix: [{ block: 'b-lectures', elem: 'lecture' }],
+									content: [
+										{
+											elem: 'time',
+											content: '20<sup>00</sup> — 21<sup>00</sup>'
+										},
+										{
+											elem: 'topic',
+											content: '<a href="yandex.ru">Task tracker</a> <sup class="green">pdf</sup><sup class="brown">video</sup>, \
+													<a href="yandex.ru">Wiki</a> <sup class="green">pdf</sup><sup class="brown">video</sup>'
+										},
+										{
+											elem: 'lector',
+											content: '<img src="http://avatars.static.yandex.net/silhouette/male-small"> <a href="yandex.ru">Георгий Мостоловица</a>'
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'b-day',
+					content: [
+						{
+							block: 'b-date',
+							mix: [{ block: 'b-day', elem: 'date' }],
+							content: [
+								{
+									elem: 'number',
+									content: '<div class="month">октябрь</div><div class="number">8</div>'
+								},
+								{
+									elem: 'text',
+									content: 'четверг'
+								}
+							]
+						},
+						{
+							block: 'b-lectures',
+							content: [
+								{
+									block: 'b-lecture',
+									mix: [{ block: 'b-lectures', elem: 'lecture' }],
+									mods : { bottomLine : 'true' },
+									content: [
+										{
+											elem: 'time',
+											content: '19<sup>00</sup> — 20<sup>00</sup>'
+										},
+										{
+											elem: 'topic',
+											content: '<a href="yandex.ru">Командная строка Unix</a> <sup class="green">pdf</sup><sup class="brown">video</sup>'
+										},
+										{
+											elem: 'lector',
+											content: '<img src="http://avatars.yandex.net/get-avatar/1631268/d1475c0925815cdad8cbe33244d56097.6305-small"> <a href="yandex.ru">Виктор Ашик</a>'
+										}
+									]
+								},
+								{
+									block: 'b-lecture',
+									mix: [{ block: 'b-lectures', elem: 'lecture' }],
+									content: [
+										{
+											elem: 'time',
+											content: '20<sup>00</sup> — 21<sup>00</sup>'
+										},
+										{
+											elem: 'topic',
+											content: '<a href="yandex.ru">Редакторы кода</a> <sup class="green">pdf</sup><sup class="brown">video</sup>'
+										},
+										{
+											elem: 'lector',
+											content: '<img src="http://avatars.yandex.net/get-avatar/44758029/708e5235c5aa2a7432347bc80eee1713.6509-small"> <a href="yandex.ru">Георгий Мостоловица</a>'
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					block: 'b-day',
+					mods: { saturday: 'true' },
+					content: [
+						{
+							block: 'b-date',
+							mix: [{ block: 'b-day', elem: 'date' }],
+							content: [
+								{
+									elem: 'number',
+									content: '<div class="month">октябрь</div><div class="number">10</div>'
+								},
+								{
+									elem: 'text',
+									content: 'суббота'
+								}
+							]
+						},
+						{
+							block: 'b-lectures',
+							content: [
+								{
+									block: 'b-lecture',
+									mix: [{ block: 'b-lectures', elem: 'lecture' }],
+									mods : { bottomLine : 'true' },
+									content: [
+										{
+											elem: 'time',
+											content: '19<sup>00</sup> — 20<sup>00</sup>'
+										},
+										{
+											elem: 'topic',
+											content: '<a href="yandex.ru">Кеширование на клиенте и сервере</a> <sup class="green">pdf</sup><sup class="brown">video</sup>'
+										},
+										{
+											elem: 'lector',
+											content: '<img src="http://avatars.yandex.net/get-avatar/45030666/4c4589e94bb45d46003da1d54e446684.6411-small"> <a href="yandex.ru">Егор Львовский</a>'
+										}
+									]
+								},
+								{
+									block: 'b-lecture',
+									mix: [{ block: 'b-lectures', elem: 'lecture' }],
+									content: [
+										{
+											elem: 'time',
+											content: '20<sup>00</sup> — 21<sup>00</sup>'
+										},
+										{
+											elem: 'topic',
+											content: '<a href="yandex.ru">CSS</a> <sup class="green">pdf</sup><sup class="brown">video</sup>'
+										},
+										{
+											elem: 'lector',
+											content: '<img src="http://avatars.yandex.net/get-avatar/81394922/b6273a6746952143e7df9325f87d2c55.5214-small"> <a href="yandex.ru">Иван Карев</a>'
+										}
+									]
+								}
+							]
+						}
 					]
 				}
 			]

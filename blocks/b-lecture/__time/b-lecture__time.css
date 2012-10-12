@@ -1,0 +1,14 @@
+.b-lecture__time
+{
+	width: 115px;
+	padding-top: 12px;
+	padding-left: 10px;
+	display: inline-block;
+
+	font-size: 12px;
+}
+
+.b-lecture__time sup
+{
+	font-size: 9px;
+}
