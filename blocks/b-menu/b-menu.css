@@ -1,0 +1,7 @@
+.b-menu
+{
+	margin-top: 20px;
+	height: 40px;
+	background: url(b-menu.png) repeat-x 0 0;
+	overflow: hidden;
+}
