@@ -1,0 +1,24 @@
+.b-date__number
+{
+	height: 80px;
+	background-color: #3363ff;
+	position: relative;
+
+	font-size: 60px;
+	text-align: center;
+}
+
+.b-date__number div.number {
+	padding-top: 10px;
+}
+
+.b-date__number div.month
+{
+	top: 5px;
+	position: absolute;
+	width: 100%;
+
+	font-family: Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+}

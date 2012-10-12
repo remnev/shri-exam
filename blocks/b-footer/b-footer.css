@@ -1,0 +1,10 @@
+.b-footer
+{
+	width: 960px;
+	margin: 20px auto;
+
+	text-align: right;
+	font-family: Georgia, serif;
+	font-size: 9px;
+	font-style: italic;
+}

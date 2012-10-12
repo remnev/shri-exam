@@ -31,33 +31,43 @@
 		{
 			block: 'b-days',
 			content: [
-		// 		{
-		// 			block: 'b-day',
-		// 			content: [
-		// 				{
-		// 					block: 'b-date',
-		// 					content: ''
-		// 				},
-		// 				{
-		// 					block: 'b-lectures',
-		// 					content: [
-		// 						{
-		// 							block: 'b-lecture',
-		// 							content: [
-		// 								{
-		// 									elem: 'b-lecture__time',
-		// 									content: '19<span>00</span> — 20<span>00</span>'
-		// 								},
-		// 								{
-		// 									elem: 'b-lecture__topic',
-		// 									content: 'Общий цикл разработки'
-		// 								}
-		// 							]
-		// 						}
-		// 					]
-		// 				}
-		// 			]
-		// 		}
+				{
+					block: 'b-day',
+					content: [
+						{
+							block: 'b-date',
+							mix: [{ block: 'b-day', elem: 'date' }],
+							content: [
+								{
+									elem: 'number',
+									content: '<div class="month">октябрь</div><div class="number">6</div>'
+								},
+								{
+									elem: 'text',
+									content: 'вторник'
+								}
+							]
+						},
+						// {
+						// 	block: 'b-lectures',
+						// 	content: [
+						// 		{
+						// 			block: 'b-lecture',
+						// 			content: [
+						// 				{
+						// 					elem: 'b-lecture__time',
+						// 					content: '19<span>00</span> — 20<span>00</span>'
+						// 				},
+						// 				{
+						// 					elem: 'b-lecture__topic',
+						// 					content: 'Общий цикл разработки'
+						// 				}
+						// 			]
+						// 		}
+						// 	]
+						// }
+					]
+				}
 			]
 		},
 		{
