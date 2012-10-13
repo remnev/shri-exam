@@ -196,4 +196,4 @@ var $bDays,
 	};
 $(function() {
 	days.init();
-})
+});

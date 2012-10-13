@@ -1,0 +1,37 @@
+.b-addDayForm
+{
+	width: 960px;
+	height: 280px;
+	margin: 20px auto 0;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+
+	font-family: Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.b-addDayForm input
+{
+	height: 20px;
+	padding: 0 3px;
+	margin-left: 20px;
+}
+
+.b-addDayForm input.short
+{
+	width: 40px;
+	margin: 0 10px;
+}
+
+.b-addDayForm input.middle
+{
+	width: 239px;
+	margin-left: 6px;
+}
+
+.b-addDayForm input.long
+{
+	width: 280px;
+}

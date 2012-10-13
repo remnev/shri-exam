@@ -1,0 +1,24 @@
+.b-addDayForm__topbar
+{
+	height: 30px;
+}
+
+.b-addDayForm__topbar .ok, .b-addDayForm__topbar .cancel
+{
+	float: right;
+	margin: 5px 20px 0;
+	border-bottom: 1px dotted #1847cd;
+	cursor: pointer;
+
+
+	font-family: Verdana, sans-serif;
+	font-style: normal;
+	color: #1847cd;
+	text-decoration: none;
+}
+
+.b-addDayForm__topbar .ok:hover, .b-addDayForm__topbar .cancel:hover
+{
+	color: #e50505;
+	border-color: #e50505;
+}

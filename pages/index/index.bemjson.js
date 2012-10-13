@@ -29,6 +29,41 @@
 			]
 		},
 		{
+			block: 'b-addDayForm',
+			content: [
+				{
+					elem: 'topbar',
+					content: '<span>Дата</span><input class="b-addDayForm__date" type="text" tabindex="1"><a href="#" tabindex="50" class="ok">Ок</a><a href="#" class="cancel">Отмена</a>'
+				},
+				{
+					elem: 'lecture',
+					// govnocode mode enable, TODO: rewrite this!
+					content: [
+						'<div>Время&nbsp;<span>c</span><input class="b-addDayForm__timeStartHour1 short" type="text" tabindex="2">ч<input class="b-addDayForm__timeStartMin1 short" type="text" tabindex="3">мин\
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Тема&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="b-addDayForm__topic1 long" type="text" tabindex="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pdf&nbsp;&nbsp;&nbsp;<input class="b-addDayForm__pdf1 long" type="text" tabindex="5"></div>',
+						'<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;по</span><input class="b-addDayForm__timeEndHour1 short" type="text" tabindex="6">ч<input class="b-addDayForm__timeEndHour1 short" type="text" tabindex="7">мин&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+						<span style="display: inline-block; width: 50px;">Ссылка на клуб</span><input class="b-addDayForm__club1 long" type="text" tabindex="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video<input class="b-addDayForm__video1 long" type="text" tabindex="9"></div>',
+						'<div><span style="display: inline-block; width: 50px;">Имя лектора</span><input class="b-addDayForm__lectorName1 middle" type="text" tabindex="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display: inline-block; width: 58px;">Ссылка на стр-цу</span><input class="b-addDayForm__lectorPage1 middle" type="text" tabindex="11">\
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display: inline-block; width: 50px;">Ссылка на аву</span><input class="b-addDayForm__lectorAva1 middle" type="text" tabindex="12"></div>'
+					]
+					// govnocode mode disable
+				},
+				{
+					elem: 'lecture',
+					// govnocode mode enable, TODO: rewrite this!
+					content: [
+						'<div>Время&nbsp;<span>c</span><input class="b-addDayForm__timeStartHour2 short" type="text" tabindex="2">ч<input class="b-addDayForm__timeStartMin2 short" type="text" tabindex="3">мин\
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Тема&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="b-addDayForm__topic2 long" type="text" tabindex="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pdf&nbsp;&nbsp;&nbsp;<input class="b-addDayForm__pdf2 long" type="text" tabindex="5"></div>',
+						'<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;по</span><input class="b-addDayForm__timeEndHour2 short" type="text" tabindex="6">ч<input class="b-addDayForm__timeEndHour2 short" type="text" tabindex="7">мин&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+						<span style="display: inline-block; width: 50px;">Ссылка на клуб</span><input class="b-addDayForm__club2 long" type="text" tabindex="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;video<input class="b-addDayForm__video2 long" type="text" tabindex="9"></div>',
+						'<div><span style="display: inline-block; width: 50px;">Имя лектора</span><input class="b-addDayForm__lectorName2 middle" type="text" tabindex="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display: inline-block; width: 58px;">Ссылка на стр-цу</span><input class="b-addDayForm__lectorPage2 middle" type="text" tabindex="11">\
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display: inline-block; width: 50px;">Ссылка на аву</span><input class="b-addDayForm__lectorAva2 middle" type="text" tabindex="12"></div>'
+					]
+					// govnocode mode disable
+				}
+			]
+		},
+		{
 			block: 'b-days',
 			content: [
 				// {

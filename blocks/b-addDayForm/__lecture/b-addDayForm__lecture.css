@@ -1,0 +1,11 @@
+.b-addDayForm__lecture
+{
+	height: 116px;
+	border-top: 1px solid #e0e0e0;
+	padding: 5px 0;
+}
+
+.b-addDayForm__lecture div
+{
+	padding: 5px 0;
+}
