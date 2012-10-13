@@ -28,3 +28,12 @@
 {
 	background-color: #d9a16a;
 }
+
+
+.b-lecture__topic sup a
+{
+	color: black;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
