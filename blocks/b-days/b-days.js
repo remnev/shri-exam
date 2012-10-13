@@ -43,8 +43,8 @@ var $bDays,
 
 			function buildDay (block, dayType) {
 				var $clone,
-					topic1 = '',
-					topic2 = '';
+					month = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+							 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
 
 				if (dayType == 'суббота') {
 					$clone = $bWeekend.clone();
@@ -52,7 +52,7 @@ var $bDays,
 					$clone = $bWorkDay.clone();
 				}
 
-				  $clone.find('.b-date__number div.month').text(block.date.number.month).end()
+				  $clone.find('.b-date__number div.month').text(month[block.date.number.month-1]).end()
 						.find('.b-date__number div.number').text(block.date.number.number).end()
 						.find('.b-date__text').text(block.date.text).end()
 						.find('.b-lecture__time:eq(0)').html(block.lectures[0].time.start.h+'<sup>'+block.lectures[0].time.start.m+'</sup> — '+
