@@ -4,16 +4,40 @@ var $bDays,
 
 	days = {
 		init: function() {
-			var $dayCur,
-				dayType;
+			var schema = this.getStorage();
 
 			$bDays = $('.b-days');
 			$bWorkDay = $('.b-templates__work');
 			$bWeekend = $('.b-templates__weekend');
 
-			for (var i = 0, blocks = this.schema; i < blocks.length; i++) {
-				dayType = blocks[i].date.text;
-				$dayCur = buildDay(blocks[i], dayType);
+			this.buildDays(schema);
+		},
+		setStorage: function(data) {
+			localStorage.setItem('schema', JSON.stringify(data));
+		},
+		getStorage: function() {
+			return JSON.parse(localStorage.getItem('schema')) || [];
+		},
+		addToStorage: function(day) {
+			var schema = this.getStorage();
+
+			schema.push(day);
+			schema.sort(function(a, b) {
+				var aDate = new Date((new Date).getFullYear(), a.date.number.month-1, a.date.number.number),
+					bDate = new Date((new Date).getFullYear(), b.date.number.month-1, b.date.number.number);
+
+				return aDate - bDate;
+			});
+
+			this.setStorage(schema);
+		},
+		buildDays: function(schema) {
+			var $dayCur,
+				dayType;
+
+			for (var i = 0; i < schema.length; i++) {
+				dayType = schema[i].date.text;
+				$dayCur = buildDay(schema[i], dayType);
 				$bDays.append($dayCur);
 			}
 
@@ -67,7 +91,7 @@ var $bDays,
 					{
 						date: {
 								number: {
-										month: 'октябрь',
+										month: 10,
 										number: 13
 									},
 								text: 'суббота'
@@ -122,7 +146,7 @@ var $bDays,
 					{
 						date: {
 								number: {
-										month: 'октябрь',
+										month: 10,
 										number: 23
 									},
 								text: 'вторник'
