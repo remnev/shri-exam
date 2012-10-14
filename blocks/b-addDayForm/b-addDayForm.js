@@ -1,13 +1,13 @@
+var form = {};
 $(function() {
-	// .b-addDayForm__topbar .ok, .b-addDayForm__topbar .cancel
-	var form = {
-		date: $('.b-addDayForm__date').datepicker({ dateFormat: 'd.m.yy' }),
+	form = {
+		date: $('.b-addDayForm__date').datepicker({ dateFormat: 'd.m.yy', onSelect: function() { form.timeStartHour1[0].focus() } }),
 
 		timeStartHour1: $('.b-addDayForm__timeStartHour1'),
 		timeStartMin1: $('.b-addDayForm__timeStartMin1'),
 		topic1: $('.b-addDayForm__topic1'),
 		pdf1: $('.b-addDayForm__pdf1'),
-		timeEndtHour1: $('.b-addDayForm__timeEndHour1'),
+		timeEndHour1: $('.b-addDayForm__timeEndHour1'),
 		timeEndMin1: $('.b-addDayForm__timeEndMin1'),
 		club1: $('.b-addDayForm__club1'),
 		video1: $('.b-addDayForm__video1'),
@@ -19,16 +19,22 @@ $(function() {
 		timeStartMin2: $('.b-addDayForm__timeStartMin2'),
 		topic2: $('.b-addDayForm__topic2'),
 		pdf2: $('.b-addDayForm__pdf2'),
-		timeEndtHour2: $('.b-addDayForm__timeEndHour2'),
+		timeEndHour2: $('.b-addDayForm__timeEndHour2'),
 		timeEndMin2: $('.b-addDayForm__timeEndMin2'),
 		club2: $('.b-addDayForm__club2'),
 		video2: $('.b-addDayForm__video2'),
 		lectorName2: $('.b-addDayForm__lectorName2'),
 		lectorPage2: $('.b-addDayForm__lectorPage2'),
-		lectorAva2: $('.b-addDayForm__lectorAva2')
+		lectorAva2: $('.b-addDayForm__lectorAva2'),
+
+		self: $('.b-addDayForm'),
+		toggle: function() {
+			this.self.slideToggle(100)
+				.find('input').each(function() { this.value = ''; });
+		}
 	},
 
-	days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+	daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
 
 	$('.b-addDayForm__topbar .ok').click(function(e) {
 		var dayObj = {
@@ -37,55 +43,56 @@ $(function() {
 										month: form.date.val().split('.')[1] || '',
 										number: form.date.val().split('.')[0] || ''
 									},
-								text: days[(new Date(form.date.val().split('.')[2], form.date.val().split('.')[1]-1, form.date.val().split('.')[0]).getDay())] || ''
+								text: daysOfWeek[(new Date(form.date.val().split('.')[2], form.date.val().split('.')[1]-1, form.date.val().split('.')[0]).getDay())] || ''
 							},
 						lectures: [
 									{
 										time: {
-											start: { h: '01', m: '23' },
-											end: { h: '12', m: '06' }
+											start: { h: form.timeStartHour1.val(), m: form.timeStartMin1.val() },
+											end: { h: form.timeEndHour1.val(), m: form.timeEndMin1.val() }
 										},
 										topics: [
 											{
-												href: 'yandex.ru',
-												text: 'Общий цикл разработки',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
+												href: form.club1.val(),
+												text: form.topic1.val(),
+												pdf: form.pdf1.val(),
+												video: form.video1.val()
 											}
 										],
 										lector: {
-											src: 'http://avatars.yandex.net/get-avatar/22422407/1f79b506bec259f72732e534813b6e52.6609-small',
-											href: 'yandex.ru',
-											name: 'Михаил Трошев'
+											src: form.lectorAva1.val(),
+											href: form.lectorPage1.val(),
+											name: form.lectorName1.val()
 										}
 									},
 									{
 										time: {
-											start: { h: '06', m: '10' },
-											end: { h: '21', m: '38' }
+											start: { h: form.timeStartHour2.val(), m: form.timeStartMin2.val() },
+											end: { h: form.timeEndHour2.val(), m: form.timeEndMin2.val() }
 										},
 										topics: [
 											{
-												href: 'yandex.ru',
-												text: 'Task tracker',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
-											},
-											{
-												href: 'yandex.ru',
-												text: 'Wiki',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
+												href: form.club2.val(),
+												text: form.topic2.val(),
+												pdf: form.pdf2.val(),
+												video: form.video2.val()
 											}
 										],
 										lector: {
-											src: 'http://avatars.yandex.net/get-avatar/1631268/d1475c0925815cdad8cbe33244d56097.6305-small',
-											href: 'yandex.ru',
-											name: 'Сергей Бережной'
+											src: form.lectorAva2.val(),
+											href: form.lectorPage2.val(),
+											name: form.lectorName2.val()
 										}
 									}
 						]
 		};
-		console.log(dayObj);
+		days.addToStorage(dayObj);
+		form.toggle();
+		$('.b-menu__addDay').removeClass('b-linksWrapper__item_state_active');
+	});
+
+	$('.b-addDayForm__topbar .cancel').click(function(e) {
+		form.toggle();
+		$('.b-menu__addDay').removeClass('b-linksWrapper__item_state_active');
 	});
 });

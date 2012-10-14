@@ -1,5 +1,6 @@
 .b-addDayForm
 {
+	display: none;
 	width: 960px;
 	height: 280px;
 	margin: 20px auto 0;
