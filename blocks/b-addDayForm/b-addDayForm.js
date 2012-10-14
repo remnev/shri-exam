@@ -1,7 +1,7 @@
 $(function() {
 	// .b-addDayForm__topbar .ok, .b-addDayForm__topbar .cancel
 	var form = {
-		date: $('.b-addDayForm__date'),
+		date: $('.b-addDayForm__date').datepicker({ dateFormat: 'd.m.yy' }),
 
 		timeStartHour1: $('.b-addDayForm__timeStartHour1'),
 		timeStartMin1: $('.b-addDayForm__timeStartMin1'),
@@ -26,8 +26,66 @@ $(function() {
 		lectorName2: $('.b-addDayForm__lectorName2'),
 		lectorPage2: $('.b-addDayForm__lectorPage2'),
 		lectorAva2: $('.b-addDayForm__lectorAva2')
-	};
+	},
+
+	days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+
 	$('.b-addDayForm__topbar .ok').click(function(e) {
-		console.log(form);
+		var dayObj = {
+						date: {
+								number: {
+										month: form.date.val().split('.')[1] || '',
+										number: form.date.val().split('.')[0] || ''
+									},
+								text: days[(new Date(form.date.val().split('.')[2], form.date.val().split('.')[1]-1, form.date.val().split('.')[0]).getDay())] || ''
+							},
+						lectures: [
+									{
+										time: {
+											start: { h: '01', m: '23' },
+											end: { h: '12', m: '06' }
+										},
+										topics: [
+											{
+												href: 'yandex.ru',
+												text: 'Общий цикл разработки',
+												pdf: 'yandex.ru',
+												video: 'yandex.ru'
+											}
+										],
+										lector: {
+											src: 'http://avatars.yandex.net/get-avatar/22422407/1f79b506bec259f72732e534813b6e52.6609-small',
+											href: 'yandex.ru',
+											name: 'Михаил Трошев'
+										}
+									},
+									{
+										time: {
+											start: { h: '06', m: '10' },
+											end: { h: '21', m: '38' }
+										},
+										topics: [
+											{
+												href: 'yandex.ru',
+												text: 'Task tracker',
+												pdf: 'yandex.ru',
+												video: 'yandex.ru'
+											},
+											{
+												href: 'yandex.ru',
+												text: 'Wiki',
+												pdf: 'yandex.ru',
+												video: 'yandex.ru'
+											}
+										],
+										lector: {
+											src: 'http://avatars.yandex.net/get-avatar/1631268/d1475c0925815cdad8cbe33244d56097.6305-small',
+											href: 'yandex.ru',
+											name: 'Сергей Бережной'
+										}
+									}
+						]
+		};
+		console.log(dayObj);
 	});
 });

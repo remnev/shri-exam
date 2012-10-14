@@ -3,8 +3,11 @@
 	title: 'Расписание занятий ШРИ',
 	head: [
 		{ elem: 'css', url: '_index.css' },
+		{ elem: 'css', url: 'http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css' },
 		{ block: 'i-jquery', elem: 'core' },
-		{ elem: 'js', url: '_index.js' }
+		{ elem: 'js', url: '_index.js' },
+		{ elem: 'js', url: 'http://code.jquery.com/ui/1.9.0/jquery-ui.js' }
+		
 	],
 	content: [
 		{
@@ -33,7 +36,7 @@
 			content: [
 				{
 					elem: 'topbar',
-					content: '<span>Дата</span><input class="b-addDayForm__date" type="text" tabindex="1"><a href="#" tabindex="50" class="ok">Ок</a><a href="#" class="cancel">Отмена</a>'
+					content: '<span>Дата</span><input class="b-addDayForm__date" type="text" tabindex="1" placeholder="d.m.yyyy"><a href="#" tabindex="50" class="ok">Ок</a><a href="#" class="cancel">Отмена</a>'
 				},
 				{
 					elem: 'lecture',
