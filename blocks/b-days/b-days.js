@@ -7,8 +7,8 @@ var $bDays,
 			var schema = this.getStorage();
 
 			$bDays = $('.b-days');
-			$bWorkDay = $('.b-templates__work');
-			$bWeekend = $('.b-templates__weekend');
+			$bWorkDay = $('.b-templates__work').children('.b-day');
+			$bWeekend = $('.b-templates__weekend').children('.b-day');
 
 			this.buildDays(schema);
 		},
@@ -35,6 +35,7 @@ var $bDays,
 			var $dayCur,
 				dayType;
 
+			$bDays.empty();
 			for (var i = 0; i < schema.length; i++) {
 				dayType = schema[i].date.text;
 				$dayCur = buildDay(schema[i], dayType);
@@ -55,10 +56,10 @@ var $bDays,
 				  $clone.find('.b-date__number div.month').text(month[block.date.number.month-1]).end()
 						.find('.b-date__number div.number').text(block.date.number.number).end()
 						.find('.b-date__text').text(block.date.text).end()
-						.find('.b-lecture__time:eq(0)').html(block.lectures[0].time.start.h+'<sup>'+block.lectures[0].time.start.m+'</sup> — '+
-															 block.lectures[0].time.end.h+'<sup>'+block.lectures[0].time.end.m+'</sup>').end()
-						.find('.b-lecture__time:eq(1)').html(block.lectures[1].time.start.h+'<sup>'+block.lectures[1].time.start.m+'</sup> — '+
-															 block.lectures[1].time.end.h+'<sup>'+block.lectures[1].time.end.m+'</sup>').end()
+						.find('.b-lecture__time:eq(0)').html(block.lectures[0].time.start.h ? (block.lectures[0].time.start.h+'<sup>'+block.lectures[0].time.start.m+'</sup> — '+
+															 block.lectures[0].time.end.h+'<sup>'+block.lectures[0].time.end.m+'</sup>') : '').end()
+						.find('.b-lecture__time:eq(1)').html(block.lectures[1].time.start.h ? (block.lectures[1].time.start.h+'<sup>'+block.lectures[1].time.start.m+'</sup> — '+
+															 block.lectures[1].time.end.h+'<sup>'+block.lectures[1].time.end.m+'</sup>') : '').end()
 						.find('.b-lecture__topic:eq(0)').html( buildTopic(block.lectures[0].topics) ).end()
 						.find('.b-lecture__topic:eq(1)').html( buildTopic(block.lectures[1].topics) ).end()
 						.find('.b-lecture__lector:eq(0)').html('<img src="'+block.lectures[0].lector.src+'"> '+
@@ -81,7 +82,8 @@ var $bDays,
 					pdf = topics[i].pdf;
 					video = topics[i].video;
 
-					resultHtml += '<a href="'+href+'">'+text+'</a> <sup class="green"><a href="'+pdf+'">pdf</a></sup> <sup class="brown"><a href="'+video+'">video</a></sup>';
+					resultHtml += text ? '<a href="'+href+'">'+text+'</a> '+(pdf ? '<sup class="green"><a href="'+pdf+'">pdf</a></sup> ' : '')+(video ? '<sup class="brown"><a href="'+video+'">video</a></sup>' : '')
+									   : '';
 					if (i != topics.length-1) resultHtml += ', ';
 				}
 				return resultHtml;

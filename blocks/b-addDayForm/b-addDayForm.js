@@ -36,7 +36,11 @@ $(function() {
 
 	daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
 
-	$('.b-addDayForm__topbar .ok').click(function(e) {
+	$('.b-addDayForm__topbar .ok').live('click', function(e) {
+		if (form.date.val() == '') {
+			$('.b-addDayForm__topbar .cancel').click();
+			return;
+		}
 		var dayObj = {
 						date: {
 								number: {
@@ -87,11 +91,12 @@ $(function() {
 						]
 		};
 		days.addToStorage(dayObj);
+		days.buildDays(days.getStorage());
 		form.toggle();
 		$('.b-menu__addDay').removeClass('b-linksWrapper__item_state_active');
 	});
 
-	$('.b-addDayForm__topbar .cancel').click(function(e) {
+	$('.b-addDayForm__topbar .cancel').live('click', function(e) {
 		form.toggle();
 		$('.b-menu__addDay').removeClass('b-linksWrapper__item_state_active');
 	});

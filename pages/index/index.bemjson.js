@@ -324,6 +324,12 @@
 											]
 										}
 									]
+								},
+								{
+									elem: 'edit',
+									content: [
+										'<span class="delete">Удал.</span> <span class="edit">Ред.</span>'
+									]
 								}
 							]
 						}
@@ -390,6 +396,12 @@
 												}
 											]
 										}
+									]
+								},
+								{
+									elem: 'edit',
+									content: [
+										'<span class="delete">Удал.</span> <span class="edit">Ред.</span>'
 									]
 								}
 							]
