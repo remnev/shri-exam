@@ -6,6 +6,13 @@ var $bDays,
 		init: function() {
 			var schema = this.getStorage();
 
+			if (schema.length == 0) {
+				$.getJSON('../schema/schema.js', function(data) {
+					days.setStorage(data);
+					days.buildDays(data);
+				});
+			}
+
 			$bDays = $('.b-days');
 			$bWorkDay = $('.b-templates__work').children('.b-day');
 			$bWeekend = $('.b-templates__weekend').children('.b-day');
@@ -88,113 +95,7 @@ var $bDays,
 				}
 				return resultHtml;
 			}
-		},
-		schema: [
-					{
-						date: {
-								number: {
-										month: 10,
-										number: 13
-									},
-								text: 'суббота'
-							},
-						lectures: [
-									{
-										time: {
-											start: { h: '01', m: '23' },
-											end: { h: '12', m: '06' }
-										},
-										topics: [
-											{
-												href: 'yandex.ru',
-												text: 'Общий цикл разработки',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
-											}
-										],
-										lector: {
-											src: 'http://avatars.yandex.net/get-avatar/22422407/1f79b506bec259f72732e534813b6e52.6609-small',
-											href: 'yandex.ru',
-											name: 'Михаил Трошев'
-										}
-									},
-									{
-										time: {
-											start: { h: '06', m: '10' },
-											end: { h: '21', m: '38' }
-										},
-										topics: [
-											{
-												href: 'yandex.ru',
-												text: 'Task tracker',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
-											},
-											{
-												href: 'yandex.ru',
-												text: 'Wiki',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
-											}
-										],
-										lector: {
-											src: 'http://avatars.yandex.net/get-avatar/1631268/d1475c0925815cdad8cbe33244d56097.6305-small',
-											href: 'yandex.ru',
-											name: 'Сергей Бережной'
-										}
-									}
-						]
-					},
-					{
-						date: {
-								number: {
-										month: 10,
-										number: 23
-									},
-								text: 'вторник'
-							},
-						lectures: [
-									{
-										time: {
-											start: { h: '19', m: '00' },
-											end: { h: '20', m: '00' }
-										},
-										topics: [
-											{
-												href: 'yandex.ru',
-												text: 'Командная строка Unix',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
-											}
-										],
-										lector: {
-											src: 'http://avatars.yandex.net/get-avatar/81394922/b6273a6746952143e7df9325f87d2c55.5214-small',
-											href: 'yandex.ru',
-											name: 'Михаил Давыдов'
-										}
-									},
-									{
-										time: {
-											start: { h: '20', m: '00' },
-											end: { h: '21', m: '00' }
-										},
-										topics: [
-											{
-												href: 'yandex.ru',
-												text: 'Безопасность веб-приложений',
-												pdf: 'yandex.ru',
-												video: 'yandex.ru'
-											}
-										],
-										lector: {
-											src: 'http://avatars.yandex.net/get-avatar/169749019/d0eec1fce57abed45a527ef3b0a1abf1.6412-small',
-											href: 'yandex.ru',
-											name: 'Тарас Иващенко'
-										}
-									}
-						]
-					}
-				]
+		}
 	};
 $(function() {
 	days.init();

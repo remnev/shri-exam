@@ -25,7 +25,7 @@
 						// { elem: 'item', tag: 'li', content: '<span>Прошедшие занятия</span>' },
 						// { elem: 'item', tag: 'li', content: '<span>Будущие занятия</span>' },
 						{ elem: 'item', tag: 'li', mix: [{ block: 'b-menu', elem: 'addDay' }], content: '<span>Добавить занятие</span>' },
-						{ elem: 'item', tag: 'li', content: '<span>Импорт/экспорт</span>' },
+						{ elem: 'item', tag: 'li', mix: [{ block: 'b-menu', elem: 'impExp' }], content: '<span>Импорт/экспорт</span>' },
 						{ elem: 'item', tag: 'li', mix: [{ block: 'b-menu', elem: 'print' }], content: '<span>Напечатать</span>' }
 					]
 				}
@@ -65,6 +65,19 @@
 					// govnocode mode disable
 				}
 			]
+		},
+		{
+			block: 'b-impExpForm',
+			content: [
+					{
+						elem: 'topbar',
+						content: '<span>Скопируйте из этого поля структуру расписания или вставьте сюда свой вариант</span><a href="#" tabindex="50" class="ok">Ок</a><a href="#" class="cancel">Отмена</a>'
+					},
+					{
+						elem: 'field',
+						content: '<textarea></textarea>'
+					}
+				]
 		},
 		{
 			block: 'b-days',
