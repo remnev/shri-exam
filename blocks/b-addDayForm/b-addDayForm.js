@@ -96,7 +96,7 @@ $(function() {
 		$('.b-menu__addDay').removeClass('b-linksWrapper__item_state_active');
 	});
 
-	$('.b-addDayForm__topbar .cancel').live('click', function(e) {
+	$('.b-addDayForm .cancel').live('click', function(e) {
 		form.toggle();
 		$('.b-menu__addDay').removeClass('b-linksWrapper__item_state_active');
 	});

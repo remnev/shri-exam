@@ -1,4 +1,4 @@
-.b-addDayForm
+.b-addDayForm, .b-editDayForm
 {
 	display: none;
 	width: 960px;
@@ -13,26 +13,32 @@
 	font-style: italic;
 }
 
-.b-addDayForm input
+.b-addDayForm input, .b-editDayForm input
 {
 	height: 20px;
 	padding: 0 3px;
 	margin-left: 20px;
 }
 
-.b-addDayForm input.short
+.b-addDayForm input.short, .b-editDayForm input.short
 {
 	width: 40px;
 	margin: 0 10px;
 }
 
-.b-addDayForm input.middle
+.b-addDayForm input.middle, .b-editDayForm input.middle
 {
 	width: 239px;
 	margin-left: 6px;
 }
 
-.b-addDayForm input.long
+.b-addDayForm input.long, .b-editDayForm input.long
 {
 	width: 280px;
+}
+
+.b-editDayForm
+{
+	margin: 5px auto 20px !important;
+	box-shadow: 0 0 10px 2px #eee inset;
 }

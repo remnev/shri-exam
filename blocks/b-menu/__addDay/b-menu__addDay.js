@@ -3,5 +3,6 @@ $(function() {
 		if (form.self.is(':visible'))
 			return;
 		form.toggle();
+		$('.b-editDayForm').remove();
 	});
 });

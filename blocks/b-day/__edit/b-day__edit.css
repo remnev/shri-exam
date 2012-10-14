@@ -1,0 +1,22 @@
+.b-day__edit
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 50px;
+
+	font-size: 9px;
+}
+
+.b-day__edit span
+{
+	cursor: pointer;
+	border-bottom: 1px dotted #000
+}
+
+.b-day__edit span:hover
+{
+	border-bottom: 1px dotted #e50505;
+
+	color: #e50505;
+}
