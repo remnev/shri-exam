@@ -1,4 +1,6 @@
-Простой шаблон проекта для работы с bem tools
+Ссылка на хостинг — http://remnev.github.com/shri-exam/pages/index/index.html
+
+Инструкция
 ========================
 
 * Cкачать проект.
@@ -14,7 +16,4 @@
 
         bem make        
 
-[bem.info](http://bem.info).
-[bem клуб](http://clubs.ya.ru/bem/).
-[bem tools](https://github.com/bem/bem-tools/blob/master/README.ru.md).
-[bem-bl](http://bem.github.com/bem-bl/index.ru.html).
+Браузеры: chrome, safari, остальные в течение понедельника (15.10.2012)
