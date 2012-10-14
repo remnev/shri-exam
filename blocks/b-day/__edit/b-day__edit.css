@@ -8,6 +8,13 @@
 	font-size: 9px;
 }
 
+@media print {
+	.b-day__edit
+	{
+		display: none;
+	}
+}
+
 .b-day__edit span
 {
 	cursor: pointer;

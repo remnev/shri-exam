@@ -5,3 +5,10 @@
 	background: url(b-menu.png) repeat-x 0 0;
 	overflow: hidden;
 }
+
+@media print {
+	.b-menu
+	{
+		display: none;
+	}
+}

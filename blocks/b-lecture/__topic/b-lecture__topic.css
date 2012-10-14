@@ -19,6 +19,13 @@
 	font-size: 10px;
 }
 
+@media print {
+	.b-lecture__topic sup
+	{
+		display: none;
+	}
+}
+
 .b-lecture__topic sup.green
 {
 	background-color: #00ff00;

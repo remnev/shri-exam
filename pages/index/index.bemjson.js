@@ -21,12 +21,12 @@
 					block: 'b-linksWrapper',
 					tag: 'ul',
 					content: [
-						{ elem: 'item', tag: 'li', content: '<span>Занятия сегодня</span>' },
-						{ elem: 'item', tag: 'li', content: '<span>Прошедшие занятия</span>' },
-						{ elem: 'item', tag: 'li', content: '<span>Будущие занятия</span>' },
-						{ elem: 'item', tag: 'li', content: '<span>Напечатать</span>' },
+						// { elem: 'item', tag: 'li', content: '<span>Занятия сегодня</span>' },
+						// { elem: 'item', tag: 'li', content: '<span>Прошедшие занятия</span>' },
+						// { elem: 'item', tag: 'li', content: '<span>Будущие занятия</span>' },
+						{ elem: 'item', tag: 'li', mix: [{ block: 'b-menu', elem: 'addDay' }], content: '<span>Добавить занятие</span>' },
 						{ elem: 'item', tag: 'li', content: '<span>Импорт/экспорт</span>' },
-						{ elem: 'item', tag: 'li', mix: [{ block: 'b-menu', elem: 'addDay' }], content: '<span>Добавить занятие</span>' }
+						{ elem: 'item', tag: 'li', mix: [{ block: 'b-menu', elem: 'print' }], content: '<span>Напечатать</span>' }
 					]
 				}
 			]

@@ -5,3 +5,10 @@
 
 	text-align: center;
 }
+
+@media print {
+	.b-date__text
+	{
+		border: none;
+	}
+}

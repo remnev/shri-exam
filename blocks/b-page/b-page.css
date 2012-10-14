@@ -4,3 +4,11 @@
 	padding: 0;
 	margin: 0;
 }
+
+@media print {
+	.b-page a
+	{
+		color: #000 !important;
+		text-decoration: none !important;
+	}
+}
