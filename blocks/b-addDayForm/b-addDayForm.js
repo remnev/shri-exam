@@ -36,9 +36,9 @@ $(function() {
 
 	daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
 
-	$('.b-addDayForm__topbar .ok').live('click', function(e) {
+	$('.b-addDayForm .ok').live('click', function(e) {
 		if (form.date.val() == '') {
-			$('.b-addDayForm__topbar .cancel').click();
+			$('.b-addDayForm .cancel').click();
 			return;
 		}
 		var dayObj = {
