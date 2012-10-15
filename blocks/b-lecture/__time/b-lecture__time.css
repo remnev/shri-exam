@@ -1,9 +1,10 @@
 .b-lecture__time
 {
 	width: 115px;
-	padding-top: 12px;
+	margin-top: 10px;
 	padding-left: 10px;
 	display: inline-block;
+	float: left;
 
 	font-size: 12px;
 }
