@@ -7,5 +7,6 @@ pages/*/*.js
 !pages/*/*.bemjson.js
 !pages/index/index.html
 !pages/*/_index.js
+!pages/schema/*
 !pages/*/_index.css
 !level.js
