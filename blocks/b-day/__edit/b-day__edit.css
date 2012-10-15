@@ -1,5 +1,6 @@
 .b-day__edit
 {
+	display: none;
 	position: absolute;
 	top: 5px;
 	right: 5px;

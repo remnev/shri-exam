@@ -1,4 +1,5 @@
 *.idea
+*.DS_Store
 .bem/cache/
 node_modules/
 libs/

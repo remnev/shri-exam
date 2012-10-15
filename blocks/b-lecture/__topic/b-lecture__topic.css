@@ -1,6 +1,8 @@
 .b-lecture__topic
 {
 	display: inline-block;
+	float: left;
+	margin-top: 5px;
 	width: 540px;
 	overflow: hidden;
 	text-overflow: ellipsis;
