@@ -1,0 +1,532 @@
+/* ../../blocks/b-page/b-page.css begin */
+.b-page
+{
+	background-color: #fafafa;
+	padding: 0;
+	margin: 0;
+}
+
+@media print {
+	.b-page a
+	{
+		color: #000 !important;
+		text-decoration: none !important;
+	}
+}
+/* ../../blocks/b-page/b-page.css end */
+
+/* ../../blocks/b-title/b-title.css begin */
+.b-title
+{
+	font-family: Verdana, sans-serif;
+	font-size: 48px;
+	color: #000;
+	width: 960px;
+	margin: 10px auto 0;
+}
+
+/* ../../blocks/b-title/b-title.css end */
+
+/* ../../blocks/b-menu/b-menu.css begin */
+.b-menu
+{
+	margin-top: 20px;
+	height: 40px;
+	background: url(../../blocks/b-menu/b-menu.png) repeat-x 0 0;
+	overflow: hidden;
+}
+
+@media print {
+	.b-menu
+	{
+		display: none;
+	}
+}
+/* ../../blocks/b-menu/b-menu.css end */
+
+/* ../../blocks/b-linksWrapper/b-linksWrapper.css begin */
+.b-linksWrapper
+{
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+}
+/* ../../blocks/b-linksWrapper/b-linksWrapper.css end */
+
+/* ../../blocks/b-linksWrapper/__item/b-linksWrapper__item.css begin */
+.b-linksWrapper__item
+{
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	padding: 8px 0;
+	margin: 5px 5px 0;
+	float: right;
+
+	color: #1847cd;
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+}
+
+.b-linksWrapper__item span
+{
+	cursor: pointer;
+	border-bottom: 1px dotted #1847cd;
+}
+
+.b-linksWrapper__item_state_hover span
+{
+	color: #e50505;
+	border-bottom: 1px dotted #e50505;
+}
+
+.b-linksWrapper__item_state_active
+{
+	background-color: #fff200;
+	box-shadow: inset 0 0 4px #808080;
+}
+
+.b-linksWrapper__item_state_active span
+{
+	color: #000;
+	cursor: default;
+	border-bottom: none;
+}
+/* ../../blocks/b-linksWrapper/__item/b-linksWrapper__item.css end */
+
+/* ../../blocks/b-addDayForm/b-addDayForm.css begin */
+.b-addDayForm, .b-editDayForm
+{
+	display: none;
+	width: 960px;
+	height: 280px;
+	margin: 20px auto 0;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+
+	font-family: Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.b-addDayForm input, .b-editDayForm input
+{
+	height: 17px;
+	padding: 0 3px;
+	margin-left: 6px;
+}
+
+.b-addDayForm input.short, .b-editDayForm input.short
+{
+	width: 40px;
+	margin: 0 10px;
+}
+
+.b-addDayForm input.middle, .b-editDayForm input.middle
+{
+	width: 237px;
+	margin-left: 6px;
+}
+
+.b-addDayForm input.long, .b-editDayForm input.long
+{
+	width: 291px;
+}
+
+.b-editDayForm
+{
+	margin: 5px auto 20px !important;
+	box-shadow: 0 0 8px 0 #eee inset;
+}
+/* ../../blocks/b-addDayForm/b-addDayForm.css end */
+
+/* ../../blocks/b-addDayForm/__topbar/b-addDayForm__topbar.css begin */
+.b-addDayForm__topbar
+{
+	height: 30px;
+}
+
+.b-addDayForm__topbar .ok, .b-addDayForm__topbar .cancel
+{
+	float: right;
+	margin: 5px 20px 0;
+	border-bottom: 1px dotted #1847cd;
+	cursor: pointer;
+
+
+	font-family: Verdana, sans-serif;
+	font-style: normal;
+	color: #1847cd;
+	text-decoration: none;
+}
+
+.b-addDayForm__topbar .ok:hover, .b-addDayForm__topbar .cancel:hover
+{
+	color: #e50505;
+	border-color: #e50505;
+}
+/* ../../blocks/b-addDayForm/__topbar/b-addDayForm__topbar.css end */
+
+/* ../../blocks/b-addDayForm/__lecture/b-addDayForm__lecture.css begin */
+.b-addDayForm__lecture
+{
+	height: 116px;
+	border-top: 1px solid #e0e0e0;
+	padding: 5px 0;
+}
+
+.b-addDayForm__lecture div
+{
+	padding: 5px 0;
+}
+/* ../../blocks/b-addDayForm/__lecture/b-addDayForm__lecture.css end */
+
+/* ../../blocks/b-impExpForm/b-impExpForm.css begin */
+.b-impExpForm
+{
+	display: none;
+	width: 960px;
+	height: 280px;
+	margin: 20px auto 0;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+
+	font-family: Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+}
+/* ../../blocks/b-impExpForm/b-impExpForm.css end */
+
+/* ../../blocks/b-impExpForm/__topbar/b-impExpForm__topbar.css begin */
+.b-impExpForm__topbar
+{
+	height: 30px;
+}
+
+.b-impExpForm__topbar .ok, .b-impExpForm__topbar .cancel
+{
+	float: right;
+	margin: 5px 20px 0;
+	border-bottom: 1px dotted #1847cd;
+	cursor: pointer;
+
+
+	font-family: Verdana, sans-serif;
+	font-style: normal;
+	color: #1847cd;
+	text-decoration: none;
+}
+
+.b-impExpForm__topbar .ok:hover, .b-impExpForm__topbar .cancel:hover
+{
+	color: #e50505;
+	border-color: #e50505;
+}
+/* ../../blocks/b-impExpForm/__topbar/b-impExpForm__topbar.css end */
+
+/* ../../blocks/b-impExpForm/__field/b-impExpForm__field.css begin */
+.b-impExpForm__field textarea
+{
+	width: 948px;
+	height: 235px;
+	padding: 5px;
+
+	font-size: 12px;
+}
+
+/* ../../blocks/b-impExpForm/__field/b-impExpForm__field.css end */
+
+/* ../../blocks/b-days/b-days.css begin */
+.b-days
+{
+	width: 960px;
+	margin: 20px auto 0;
+}
+
+/* ../../blocks/b-days/b-days.css end */
+
+/* ../../blocks/b-footer/b-footer.css begin */
+.b-footer
+{
+	width: 960px;
+	margin: 20px auto;
+
+	text-align: right;
+	font-family: Georgia, serif;
+	font-size: 9px;
+	font-style: italic;
+}
+
+/* ../../blocks/b-footer/b-footer.css end */
+
+/* ../../blocks/b-templates/b-templates.css begin */
+.b-templates
+{
+	display: none;
+}
+
+/* ../../blocks/b-templates/b-templates.css end */
+
+/* ../../blocks/b-templates/__work/b-templates__work.css begin */
+.b-templates__work
+{
+}
+
+/* ../../blocks/b-templates/__work/b-templates__work.css end */
+
+/* ../../blocks/b-templates/__weekend/b-templates__weekend.css begin */
+.b-templates__weekend
+{
+}
+
+/* ../../blocks/b-templates/__weekend/b-templates__weekend.css end */
+
+/* ../../blocks/b-day/b-day.css begin */
+.b-day
+{
+	height: 95px;
+	margin-bottom: 5px;
+	position: relative;
+
+	font-family: Verdana, sans-serif;
+	color: #000;
+	font-size: 10px;
+}
+
+@media print {
+	.b-day
+	{
+		border-bottom: 1px solid #000;
+	}
+}
+/* ../../blocks/b-day/b-day.css end */
+
+/* ../../blocks/b-day/__date/b-day__date.css begin */
+.b-day__date
+{
+	width: 80px;
+	display: inline-block;
+	float: left;
+}
+
+/* ../../blocks/b-day/__date/b-day__date.css end */
+
+/* ../../blocks/b-day/__edit/b-day__edit.css begin */
+.b-day__edit
+{
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 50px;
+
+	font-size: 9px;
+}
+
+@media print {
+	.b-day__edit
+	{
+		display: none;
+	}
+}
+
+.b-day__edit span
+{
+	cursor: pointer;
+	border-bottom: 1px dotted #000
+}
+
+.b-day__edit span:hover
+{
+	border-bottom: 1px dotted #e50505;
+
+	color: #e50505;
+}
+/* ../../blocks/b-day/__edit/b-day__edit.css end */
+
+/* ../../blocks/b-date/b-date.css begin */
+.b-date
+{
+}
+
+/* ../../blocks/b-date/b-date.css end */
+
+/* ../../blocks/b-date/__number/b-date__number.css begin */
+.b-date__number
+{
+	height: 80px;
+	background-color: #3363ff;
+	position: relative;
+
+	font-size: 60px;
+	text-align: center;
+}
+
+.b-date__number div.number {
+	padding-top: 10px;
+}
+
+.b-date__number div.month
+{
+	top: 5px;
+	position: absolute;
+	width: 100%;
+
+	font-family: Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.b-day_saturday_true .b-date__number
+{
+	background-color: #ff3355;
+}
+/* ../../blocks/b-date/__number/b-date__number.css end */
+
+/* ../../blocks/b-date/__text/b-date__text.css begin */
+.b-date__text
+{
+	border: 1px solid #898989;
+	margin-top: 1px;
+
+	text-align: center;
+}
+
+@media print {
+	.b-date__text
+	{
+		border: none;
+	}
+}
+/* ../../blocks/b-date/__text/b-date__text.css end */
+
+/* ../../blocks/b-lectures/b-lectures.css begin */
+.b-lectures
+{
+	height: 80px;
+	width: 870px;
+	background-color: #e5ebff;
+	overflow: hidden;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.b-day_saturday_true .b-lectures
+{
+	background-color: #ffe5ea;
+}
+/* ../../blocks/b-lectures/b-lectures.css end */
+
+/* ../../blocks/b-lectures/__lecture/b-lectures__lecture.css begin */
+.b-lectures__lecture
+{
+	height: 40px;
+	width: 100%;
+}
+/* ../../blocks/b-lectures/__lecture/b-lectures__lecture.css end */
+
+/* ../../blocks/b-lecture/b-lecture.css begin */
+.b-lecture
+{
+}
+
+.b-lecture_bottomLine_true
+{
+	height: 39px;
+	border-bottom: 1px solid #fff;
+}
+/* ../../blocks/b-lecture/b-lecture.css end */
+
+/* ../../blocks/b-lecture/__time/b-lecture__time.css begin */
+.b-lecture__time
+{
+	width: 115px;
+	margin-top: 10px;
+	padding-left: 10px;
+	display: inline-block;
+	float: left;
+
+	font-size: 12px;
+}
+
+.b-lecture__time sup
+{
+	font-size: 9px;
+}
+/* ../../blocks/b-lecture/__time/b-lecture__time.css end */
+
+/* ../../blocks/b-lecture/__topic/b-lecture__topic.css begin */
+.b-lecture__topic
+{
+	display: inline-block;
+	float: left;
+	margin-top: 5px;
+	width: 540px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 22px;
+}
+
+.b-lecture__topic sup
+{
+	margin-left: 5px;
+	display: inline-block;
+	width: 40px;
+
+	text-align: center;
+	font-size: 10px;
+}
+
+@media print {
+	.b-lecture__topic sup
+	{
+		display: none;
+	}
+}
+
+.b-lecture__topic sup.green
+{
+	background-color: #00ff00;
+}
+
+.b-lecture__topic sup.brown
+{
+	background-color: #d9a16a;
+}
+
+
+.b-lecture__topic sup a
+{
+	color: black;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
+/* ../../blocks/b-lecture/__topic/b-lecture__topic.css end */
+
+/* ../../blocks/b-lecture/__lector/b-lecture__lector.css begin */
+.b-lecture__lector
+{
+	display: inline-block;
+	margin-top: 5px;
+	width: 205px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 14px;
+}
+
+@media print {
+	.b-lecture__lector img
+	{
+		display: none;
+	}
+}
+/* ../../blocks/b-lecture/__lector/b-lecture__lector.css end */
+
